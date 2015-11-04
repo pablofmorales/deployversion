@@ -4,7 +4,6 @@
         "doctrine/dbal": "2.3.4",
         "silex/silex": "~1.3",
         "symfony/yaml" : "2.4@stable",
-        "guzzle/silex-provider" : "*",
         "mockery/mockery": "*",
         "symfony/validator": "2.4@stable"
     },
