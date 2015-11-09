@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3910e50db04f7da7aeea04f72630959a",
-    "content-hash": "9d4e2d9c0848cf72bec0781a021ea67b",
+    "hash": "f9766029195344b5a959555f07307f19",
+    "content-hash": "8b8bd4bb3bd4bd2882d1d1687b82d566",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -354,12 +354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/097e7ba84f64a427e55008117ef2bb94096731dc",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
@@ -371,7 +371,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -413,7 +413,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-10-07 18:00:26"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "doctrine/lexer",
@@ -468,145 +468,6 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
-        },
-        {
-            "name": "guzzle/guzzle",
-            "version": "v3.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
-                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.3",
-                "symfony/event-dispatcher": ">=2.1"
-            },
-            "replace": {
-                "guzzle/batch": "self.version",
-                "guzzle/cache": "self.version",
-                "guzzle/common": "self.version",
-                "guzzle/http": "self.version",
-                "guzzle/inflection": "self.version",
-                "guzzle/iterator": "self.version",
-                "guzzle/log": "self.version",
-                "guzzle/parser": "self.version",
-                "guzzle/plugin": "self.version",
-                "guzzle/plugin-async": "self.version",
-                "guzzle/plugin-backoff": "self.version",
-                "guzzle/plugin-cache": "self.version",
-                "guzzle/plugin-cookie": "self.version",
-                "guzzle/plugin-curlauth": "self.version",
-                "guzzle/plugin-error-response": "self.version",
-                "guzzle/plugin-history": "self.version",
-                "guzzle/plugin-log": "self.version",
-                "guzzle/plugin-md5": "self.version",
-                "guzzle/plugin-mock": "self.version",
-                "guzzle/plugin-oauth": "self.version",
-                "guzzle/service": "self.version",
-                "guzzle/stream": "self.version"
-            },
-            "require-dev": {
-                "doctrine/cache": "*",
-                "monolog/monolog": "1.*",
-                "phpunit/phpunit": "3.7.*",
-                "psr/log": "1.0.*",
-                "symfony/class-loader": "*",
-                "zendframework/zend-cache": "<2.3",
-                "zendframework/zend-log": "<2.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Guzzle": "src/",
-                    "Guzzle\\Tests": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Guzzle Community",
-                    "homepage": "https://github.com/guzzle/guzzle/contributors"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2014-01-28 22:29:15"
-        },
-        {
-            "name": "guzzle/silex-provider",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Guzzle3/guzzle-silex-extension.git",
-                "reference": "557d0205d8691d0702380102fac5a662854e0691"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Guzzle3/guzzle-silex-extension/zipball/557d0205d8691d0702380102fac5a662854e0691",
-                "reference": "557d0205d8691d0702380102fac5a662854e0691",
-                "shasum": ""
-            },
-            "require": {
-                "guzzle/guzzle": ">=2.0.0",
-                "php": ">=5.3.2"
-            },
-            "type": "silex-provider",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "GuzzleServiceProvider.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com"
-                }
-            ],
-            "description": "Guzzle silex provider",
-            "keywords": [
-                "Guzzle",
-                "silex"
-            ],
-            "abandoned": true,
-            "time": "2015-01-12 02:30:51"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -1062,12 +923,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "d16c8dbade9b00bbc7b2c5061052c5a8ede2fa85"
+                "reference": "3d306680ba2b547ce2569aaac07d665dbab7d5b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/d16c8dbade9b00bbc7b2c5061052c5a8ede2fa85",
-                "reference": "d16c8dbade9b00bbc7b2c5061052c5a8ede2fa85",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3d306680ba2b547ce2569aaac07d665dbab7d5b2",
+                "reference": "3d306680ba2b547ce2569aaac07d665dbab7d5b2",
                 "shasum": ""
             },
             "require": {
@@ -1136,7 +997,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-04 09:24:46"
+            "time": "2015-11-09 12:52:14"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1144,12 +1005,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "82159e61debcd09790b20154b350b1c083029aa6"
+                "reference": "0b6a8940385311a24e060ec1fe35680e17c74497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/82159e61debcd09790b20154b350b1c083029aa6",
-                "reference": "82159e61debcd09790b20154b350b1c083029aa6",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0b6a8940385311a24e060ec1fe35680e17c74497",
+                "reference": "0b6a8940385311a24e060ec1fe35680e17c74497",
                 "shasum": ""
             },
             "require": {
@@ -1192,7 +1053,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2015-10-27 22:54:43"
+            "time": "2015-11-04 20:28:58"
         },
         {
             "name": "symfony/property-access",
@@ -1200,12 +1061,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "21e1e9ea4ed2ccc6efb167dad6ec8e2903952ad4"
+                "reference": "6bf7ad232fe078656491bbe951154e874c9e8ef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/21e1e9ea4ed2ccc6efb167dad6ec8e2903952ad4",
-                "reference": "21e1e9ea4ed2ccc6efb167dad6ec8e2903952ad4",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/6bf7ad232fe078656491bbe951154e874c9e8ef4",
+                "reference": "6bf7ad232fe078656491bbe951154e874c9e8ef4",
                 "shasum": ""
             },
             "require": {
@@ -1252,7 +1113,7 @@
                 "property path",
                 "reflection"
             ],
-            "time": "2015-10-30 20:15:42"
+            "time": "2015-11-09 12:46:59"
         },
         {
             "name": "symfony/routing",
@@ -1260,12 +1121,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "f18b924e9fb82b69124b5fd7da690868bb37959b"
+                "reference": "b514a54538b406776d503855f63bf6ebbabd5e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/f18b924e9fb82b69124b5fd7da690868bb37959b",
-                "reference": "f18b924e9fb82b69124b5fd7da690868bb37959b",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/b514a54538b406776d503855f63bf6ebbabd5e8b",
+                "reference": "b514a54538b406776d503855f63bf6ebbabd5e8b",
                 "shasum": ""
             },
             "require": {
@@ -1326,7 +1187,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-10-30 23:35:59"
+            "time": "2015-11-09 10:46:27"
         },
         {
             "name": "symfony/translation",
