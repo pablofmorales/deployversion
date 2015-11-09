@@ -8,15 +8,15 @@ class Versions
 
     public function __construct($versions)
     {
-        $this->version = $versions;
+        $this->versions = $versions;
     }
 
-    public function get($project)
+    public function latests($project)
     {
-        $version = $this->version->getLatestByProject($project);
+        $version = $this->versions->getLatestByProject($project);
 
         return json_encode(
-            ['response' => 
+            ['response' =>
                 ['project' => $project, 'version' => $version]
             ]
         );

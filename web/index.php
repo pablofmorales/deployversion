@@ -8,11 +8,12 @@ define("BASE_DIR", __DIR__ . '/../');
 
 include BASE_DIR . 'vendor/autoload.php';
 
-$app = new Coquelux\Application();
+$app = new Silex\Application();
 
 if (in_array(APP_ENV, array('dev', 'staging'))) {
     $app['debug'] = true;
 }
+$app['debug'] = true;
 
 $app['guzzle'] = $app->share(function () use ($app) {
     return new Guzzle\Http\Client();
@@ -25,7 +26,12 @@ $app['home'] = $app->share(function () use ($app) {
     return new Controllers\Home();
 });
 
-$app->before(function (Request $request, Coquelux\Application $app) {
+$app['versions'] = $app->share(function () use ($app) {
+
+    return new Controllers\Versions();
+});
+
+$app->before(function (Request $request, Silex\Application $app) {
     if (extension_loaded('newrelic')) {
         newrelic_name_transaction(current(explode('?', $_SERVER['REQUEST_URI'])));
     }
@@ -43,4 +49,5 @@ $app->after(function (Request $request, Response $response) {
 
 $app->match("{url}", function($url) use ($app) { return "OK"; })->assert('url', '.*')->method("OPTIONS");
 $app->get('/', 'home:index');
+$app->get('/versions/latests/{projectCode}', 'versions:latest');
 $app->run();
