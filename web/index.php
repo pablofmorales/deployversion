@@ -6,6 +6,9 @@ define("APP_NAME", getenv('APP_NAME'));
 define("APP_ENV", getenv('APP_ENV'));
 define("BASE_DIR", __DIR__ . '/../');
 
+
+\date_default_timezone_set('America/Los_Angeles');
+
 include BASE_DIR . 'vendor/autoload.php';
 
 $app = new Silex\Application();
