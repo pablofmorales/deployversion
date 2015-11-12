@@ -2,6 +2,8 @@
 
 namespace Controllers;
 
+use Modals;
+
 class Versions
 {
     private $versions;
@@ -11,7 +13,7 @@ class Versions
         $this->versions = $versions;
     }
 
-    public function latests($project)
+    public function latest($project)
     {
         $version = $this->versions->getLatestByProject($project);
 

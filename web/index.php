@@ -6,7 +6,6 @@ define("APP_NAME", getenv('APP_NAME'));
 define("APP_ENV", getenv('APP_ENV'));
 define("BASE_DIR", __DIR__ . '/../');
 
-
 \date_default_timezone_set('America/Los_Angeles');
 
 include BASE_DIR . 'vendor/autoload.php';
@@ -16,7 +15,12 @@ $app = new Silex\Application();
 if (in_array(APP_ENV, array('dev', 'staging'))) {
     $app['debug'] = true;
 }
-$app['debug'] = true;
+
+$app->register(new Silex\Provider\DoctrineServiceProvider(),
+    ['db.options' => include sprintf(
+        '%s/src/Config/credentials.%s.php', BASE_DIR, APP_NAME
+    )]
+);
 
 $app['guzzle'] = $app->share(function () use ($app) {
     return new Guzzle\Http\Client();
@@ -30,8 +34,8 @@ $app['home'] = $app->share(function () use ($app) {
 });
 
 $app['versions'] = $app->share(function () use ($app) {
-
-    return new Controllers\Versions();
+    $versions = new Models\Versions($app['db']);
+    return new Controllers\Versions($versions);
 });
 
 $app->before(function (Request $request, Silex\Application $app) {
@@ -39,7 +43,6 @@ $app->before(function (Request $request, Silex\Application $app) {
         newrelic_name_transaction(current(explode('?', $_SERVER['REQUEST_URI'])));
     }
 });
-
 
 $app->after(function (Request $request, Response $response) {
     $response->headers->set('Access-Control-Allow-Origin', '*');
@@ -51,6 +54,6 @@ $app->after(function (Request $request, Response $response) {
 });
 
 $app->match("{url}", function($url) use ($app) { return "OK"; })->assert('url', '.*')->method("OPTIONS");
+$app->get('/versions/latest/{project}', 'versions:latest');
 $app->get('/', 'home:index');
-$app->get('/versions/latest/{projectCode}', 'versions:latest');
 $app->run();
