@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -ti deploy_version_db mysql -u root deploy

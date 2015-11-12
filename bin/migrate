@@ -1,0 +1,2 @@
+#!/bin/bash
+docker exec -ti deploy_webserver vendor/bin/phinx migrate -e development
