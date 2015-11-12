@@ -23,7 +23,7 @@ class VersioningTest extends TestBase
 
         $versionModel = new \Models\Versions($conn);
         $versionController = new \Controllers\Versions($versionModel);
-        $response = $versionController->get('projectTest');
+        $response = $versionController->latest('projectTest');
 
         $this->assertEquals($response, json_encode($expected));
     }
