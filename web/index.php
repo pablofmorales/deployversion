@@ -52,5 +52,5 @@ $app->after(function (Request $request, Response $response) {
 
 $app->match("{url}", function($url) use ($app) { return "OK"; })->assert('url', '.*')->method("OPTIONS");
 $app->get('/', 'home:index');
-$app->get('/versions/latests/{projectCode}', 'versions:latest');
+$app->get('/versions/latest/{projectCode}', 'versions:latest');
 $app->run();

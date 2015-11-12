@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="tests/Unit" tests="1" assertions="1" failures="0" errors="0" time="0.062840">
-    <testsuite name="Tests\Unit\VersioningTest" file="/Users/pablo/Workspace/deploy/tests/Unit/VersioningTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.062840">
-      <testcase name="testCheckTheLastVersion" class="Tests\Unit\VersioningTest" file="/Users/pablo/Workspace/deploy/tests/Unit/VersioningTest.php" line="9" assertions="1" time="0.062840"/>
-    </testsuite>
-  </testsuite>
-</testsuites>
